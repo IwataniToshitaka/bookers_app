@@ -1,2 +1,46 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<html>
+  <head>
+    <h1>Books</h1>
+      <%= form_with model: Book.new do |f| %>
+  </head>
+
+  <table>
+    <thead><!--横並び-->
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>リーダブルコード</td>
+        <td>ddd</td>
+      </tr>
+        <td>ふぁん</td>
+        <td>そーじ</td>
+        <td>Show</td>
+        <td>Edit</td>
+        <td>Destro</td>
+      <tr>
+      </tr>
+    </thead>
+      <tr>
+      </tr>
+    </tbody>
+
+</table>
+
+
+    <h2>New Book</h2>
+      <p>Title</p>
+      <%= f.text_field :title %>
+
+      <p>Body</p>
+      <%= f.text_area :body %>
+
+      <%= f.submit 'Create Book' %>
+    <% end %>
+
+  </body>
+</html>
