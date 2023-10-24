@@ -2,7 +2,7 @@
 
 <% @books.each do |book| %>
 
-<table class="table">
+<table>
   <thead>
     <tr>
       <th>Title</th>
@@ -11,17 +11,32 @@
     </tr>
   </thead>
   <tbody>
-    <tr><%= book.title %></tr>
-    <tr><%= book.body %></tr>
-    <tr><%= link_to "Submit", book_path(book.id) %></tr>
-    <tr><%= link_to "Edit", book_path(book.id) %></tr>
-    <tr><%= link_to "Delete", book_path(book.id) %></tr>
+    <tr>
+      <th><%= book.title %></th>
+      <th><%= book.body %></th>
+      <th><%= link_to "Show", show_book_path(book.id) %></th>
+      <th><%= link_to "Edit", edit_book_path(book.id) %></th>
+      <th><%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %></th>
+    </tr>
   </tbody>
   <tfoot>
     <tr>
     </tr>
   </tfoot>
 </table>
+<% end %>
 
+<h2>New book</h2>
+
+
+<%= form_with model: @book do |f| %>
+
+  <p>Title</p>
+  <%= f.text_field :title %>
+
+  <p>Book</p>
+  <%= f.text_area :body %>
+
+  <%= f.submit 'CreateBook'%>
 
 <% end %>
