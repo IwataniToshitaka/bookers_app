@@ -5,15 +5,13 @@ class BooksController < ApplicationController
   end
 
   def create
-
-
     #データを受け取り新規登録のインスタンス作成
     #paramsにはformから送られてくるデータが入っている
     book = Book.new(list_params)
     #データをデータベースに保存するためのsaveメソッド実行
     book.save
     #topへリダイレクト
-    redirect_to '/top'
+    redirect_to list_pat(list.id)
   end
 
   def index
@@ -21,11 +19,11 @@ class BooksController < ApplicationController
   end
 
   def show
-    @books = Book.all
+    @book = Book.find(params[:id])
   end
 
   def edit
-    @books = Book.all
+    @books = Book.find(params[:id])
   end
 
   def destroy
