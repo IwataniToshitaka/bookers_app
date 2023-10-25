@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+.books-table{
+  padding: 10px 20px;
+}
+
+
+.title-books{
+  font-size:　12px;
+  padding: 5px 20px;
+}
+
+.table-title{
+  font-size: 12px;
+  font-align: center;
+}
+.table-body{
+  font-size: 12px;
+  font-align: center;
+}
+
+.books-show{
+  font-size: 12px;
+}
+
+.books-edit{
+  font-size: 12px;
+}
+
+.books-destroy{
+  font-size: 12px;
+}
+
+ .create-botton {
+  border-width:1px;
+  font-size: 50px
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.new-post-list {
+  padding: 10px 20px;
+  flex-direction: column;
+}

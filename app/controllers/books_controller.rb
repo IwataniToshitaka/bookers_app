@@ -41,6 +41,7 @@ class BooksController < ApplicationController
     book.destroy #データ(レコード)を削除
     redirect_to '/books'  #投稿一覧画面へリダイレクト
   end
+
   #これより下はcontroller内のみ呼び出す
   private
   #ストロングデータ
