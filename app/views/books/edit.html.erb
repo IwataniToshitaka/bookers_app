@@ -1,8 +1,12 @@
-<h1>Ediding Book</h1>
+<div class="editing-book">
+<h1>Editing Book</h1>
+</div>
 
 <%= form_with model: @book, url: update_book_path(@book.id), method: :patch do |f| %>
 
+<div class="editing-title">
   <p>Title</p>
+</div>
   <%= f.text_field :title %>
 
   <p>本文</p>

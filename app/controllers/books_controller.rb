@@ -9,7 +9,7 @@ class BooksController < ApplicationController
     #paramsにはformから送られてくるデータが入っている
     book = Book.new(book_params)
     #データをデータベースに保存するためのsaveメソッド実行
-     book.save
+    book.save
     #topへリダイレクト
     redirect_to '/books'
   end
@@ -27,7 +27,7 @@ class BooksController < ApplicationController
   end
 
   def update
-    book = Book.find(params[:id])
+    @book = Book.find(params[:id])
     book.update(book_params)
     redirect_to book_path(book.id)
   end

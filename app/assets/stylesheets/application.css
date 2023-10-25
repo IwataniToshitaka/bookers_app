@@ -23,6 +23,17 @@
   word-spacing: 10px;
 }
 
+.books-show{
+  word-spacing: 100px;
+}
+
+.books-edit{
+  word-spacing: 1px;
+}
+
+.books-destroy{
+  word-spacing: 1px;
+}
 
 .books-table{
   padding: 10px 20px;
@@ -44,9 +55,9 @@
   font-align: center;
 }
 
-  .newbook-title{
-    word-spacing: 100px;
-  }
+.newbook-title{
+  word-spacing: 100px;
+}
 
 .books-show{
   font-size: 12px;
@@ -70,4 +81,27 @@
 .new-post-list {
   padding: 10px 20px;
   flex-direction: column;
+}
+
+.show-table{
+  padding: 10px 50px;
+  font-size: 10px;
+}
+
+.show-link{
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height :10px;
+  border-collapse:  1px solid black;
+}
+
+
+/*ここからeditページ*/
+
+.editing-book{
+  padding: 1px 25px;
+  font-size: 12px;
+}
+
+.editing-title{
 }

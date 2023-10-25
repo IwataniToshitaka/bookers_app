@@ -1,6 +1,15 @@
-<h4>Show:</h4>
-<h4>Title:</h4>
-<p><%= @book.title %></p>
-<p><%= @book.body %></p>
+<table class="show-table">
+<tr>
+    <th>Title:</th>
+    <td><%= @book.title %></td>
+</tr>
+<tr>
+    <th>Body:</th>
+    <td><%= @book.body %></td>
+</tr>
+</table>
+
+<div class="show-link">
 <%= link_to "Edit", edit_book_path(@book.id) %>
 <%= link_to "Back", destroy_book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+</div>
