@@ -7,15 +7,11 @@ class BooksController < ApplicationController
   def create
     #データを受け取り新規登録のインスタンス作成
     #paramsにはformから送られてくるデータが入っている
-    @book = Book.new(book_params)
+    book = Book.new(book_params)
     #データをデータベースに保存するためのsaveメソッド実行
-    if @book.save
-      flash[:notice] = "投稿に成功しました(ﾟ∀ﾟ)"
+     book.save
     #topへリダイレクト
-    redirect_to book_path(@book.id)
-    else
-      flash.now[:alert] = "投稿に失敗しました( ﾉД`)"
-    end
+    redirect_to '/books'
   end
 
   def index
