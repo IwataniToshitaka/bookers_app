@@ -7,9 +7,9 @@ class BooksController < ApplicationController
   def create
     #データを受け取り新規登録のインスタンス作成
     #paramsにはformから送られてくるデータが入っている
-    book = Book.new(book_params)
+    @book = Book.new(book_params)
     #データをデータベースに保存するためのsaveメソッド実行
-    book.save
+    @book.save
     #topへリダイレクト
     redirect_to '/books'
   end
@@ -27,19 +27,19 @@ class BooksController < ApplicationController
   end
 
   def update
-    @book = Book.find(params[:id])
+    book = Book.find(params[:id])
     book.update(book_params)
     redirect_to book_path(book.id)
   end
 
   def destroy
-    @book = Book.find(params[:id]) #データ(レコード)を１件取得
+    book = Book.find(params[:id]) #データ(レコード)を１件取得
 
-    if  @book.destroy #データ(レコード)を削除
+    if  book.destroy #データ(レコード)を削除
         flash[:notice] = "Successfull!!!!!!(ﾟ∀ﾟ)"
-    redirect_to '/books'  #投稿一覧画面へリダイレクト
+    redirect_to '/edit'  #投稿一覧画面へリダイレクト
         else flash[:notice] = "投稿に成功しました(ﾟ∀ﾟ)"
-    redirect_to '/books'  #投稿一覧画面へリダイレクト
+    render :books  #投稿一覧画面へリダイレクト
 
   end
 end

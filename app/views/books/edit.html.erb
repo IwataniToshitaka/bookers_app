@@ -1,3 +1,5 @@
+<% flash[notice] %>
+
 <div class="editing-page">
 <h1 class="editing-book">Editing Book</h1>
 
@@ -14,10 +16,9 @@
 </div>
 <div>
   <%= f.submit 'update Book' %>
-</div>
+<div
 <% end %>
 
 <%= link_to "Show", show_book_path(@book.id) %>
 <%= link_to "Back", show_book_path(@book.id) %>
 
-</div>
