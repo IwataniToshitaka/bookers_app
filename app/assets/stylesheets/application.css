@@ -82,10 +82,21 @@
   padding: 10px 20px;
   flex-direction: column;
 }
+/*ここからShowページ*/
 
 .show-table{
   padding: 10px 50px;
-  font-size: 10px;
+
+}
+
+.show-title{
+  padding: 10px 10px ;
+  font-size:12px
+}
+
+.show-body{
+  padding: 10px 10px;
+  font-size:12px;
 }
 
 .show-link{
@@ -98,10 +109,30 @@
 
 /*ここからeditページ*/
 
-.editing-book{
-  padding: 1px 25px;
+
+
+.editing-page{
+  padding: 1px 20px;
   font-size: 12px;
+  margin-bottom: 0px;
+}
+
+.editing-book{
+  margin-bottom: 0px;
+}
+
+.editing-new{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .editing-title{
+  font-size:12px;
+  margin-top: 0px;
+  margin-bottom: 0px
+}
+
+.editing-body{
+  font-size:12px;
+  margin-bottom: 0px;
 }

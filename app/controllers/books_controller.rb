@@ -33,10 +33,16 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    book = Book.find(params[:id]) #データ(レコード)を１件取得
-    book.destroy #データ(レコード)を削除
+    @book = Book.find(params[:id]) #データ(レコード)を１件取得
+
+    if  @book.destroy #データ(レコード)を削除
+        flash[:notice] = "Successfull!!!!!!(ﾟ∀ﾟ)"
     redirect_to '/books'  #投稿一覧画面へリダイレクト
+        else flash[:notice] = "投稿に成功しました(ﾟ∀ﾟ)"
+    redirect_to '/books'  #投稿一覧画面へリダイレクト
+
   end
+end
 
   #これより下はcontroller内のみ呼び出す
   private
