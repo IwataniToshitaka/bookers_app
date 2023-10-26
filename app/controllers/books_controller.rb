@@ -7,19 +7,23 @@ class BooksController < ApplicationController
   def create
     #データを受け取り新規登録のインスタンス作成
     #paramsにはformから送られてくるデータが入っている
-    @book = Book.new(book_params)
+    book = Book.new(book_params)
     #データをデータベースに保存するためのsaveメソッド実行
-    @book.save
+    if book.save
+      flash[:notice] = "Successfull!!!!!!(ﾟ∀ﾟ)"
     #topへリダイレクト
-    redirect_to '/books'
+    redirect_to '/index'
   end
+end
 
   def index
     @books = Book.all
+    @book = Book.new
   end
 
   def show
     @book = Book.find(params[:id])
+    @books = Book.all
   end
 
   def edit

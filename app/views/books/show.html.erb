@@ -1,3 +1,5 @@
+<% flash[notice] %>
+
 <table class="show-table">
 <tr>
     <th class=show-title>Title:</th>
@@ -12,5 +14,5 @@
 
 <div class="show-link">
 <%= link_to "Edit", edit_book_path(@book.id) %>
-<%= link_to "Back", destroy_book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+<a href= "https://c994ff6d1bf3415bbf91c541720a28f4.vfs.cloud9.ap-northeast-1.amazonaws.com/books">Back</a>
 </div>

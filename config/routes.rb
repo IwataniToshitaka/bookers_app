@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'books/new'
+  get 'index' => 'books#index' #/index指定したらbookscontroller>indexアクションが起動する#
   get 'top' => 'books#top', as: 'top_book'
   post 'books' => 'books#create'
   get 'books' => 'books#index'
