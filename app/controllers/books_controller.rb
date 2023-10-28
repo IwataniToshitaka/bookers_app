@@ -12,7 +12,7 @@ class BooksController < ApplicationController
     if book.save
       flash[:notice] = "Successfull!!!!!!(ﾟ∀ﾟ)"
     #topへリダイレクト
-    redirect_to '/index'
+    redirect_to '/edit'
   end
 end
 
@@ -41,7 +41,7 @@ end
 
     if  book.destroy #データ(レコード)を削除
         flash[:notice] = "Successfull!!!!!!(ﾟ∀ﾟ)"
-    redirect_to '/edit'  #投稿一覧画面へリダイレクト
+    redirect_to @book#投稿一覧画面へリダイレクト
         else flash[:notice] = "投稿に成功しました(ﾟ∀ﾟ)"
     render :books  #投稿一覧画面へリダイレクト
 
