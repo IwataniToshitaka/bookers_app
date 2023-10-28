@@ -27,22 +27,22 @@ end
   end
 
   def edit
-    @book = Book.find(params[:id])
+    book = @Book.find(params[:id])
   end
 
   def update
-    book = Book.find(params[:id])
+    book = @Book.find(params[:id])
     book.update(book_params)
-    redirect_to book_path(book.id)
-  end
+    redirect_to '/edit'
+    end
 
   def destroy
     book = Book.find(params[:id]) #データ(レコード)を１件取得
 
     if  book.destroy #データ(レコード)を削除
+        redirect_to '/books'#投稿一覧画面へリダイレクト
         flash[:notice] = "Successfull!!!!!!(ﾟ∀ﾟ)"
-    redirect_to @book#投稿一覧画面へリダイレクト
-        else flash[:notice] = "投稿に成功しました(ﾟ∀ﾟ)"
+    else flash[:notice] = "投稿に成功しました(ﾟ∀ﾟ)"
     render :books  #投稿一覧画面へリダイレクト
 
   end
