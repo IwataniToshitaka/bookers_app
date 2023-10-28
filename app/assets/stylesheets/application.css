@@ -84,6 +84,17 @@
   flex-direction: column;
 }
 
+.push-title{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.push-body{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+
 /*ここからShowページ*/
 
 .show-table{
@@ -108,7 +119,6 @@
   border-collapse:  1px solid black;
 }
 
-.show-
 
 
 /*ここからeditページ*/
@@ -123,7 +133,7 @@
 
 .editing-book{
   margin-bottom: 0px;
-  color:white;
+  color:block;
   text-decoration:none;
 }
 
