@@ -97,6 +97,13 @@
 
 /*ここからShowページ*/
 
+.show-flash{
+  font-size:12px;
+  margin-top: 10px;
+  padding: 10px 100px;
+  color : green;
+}
+
 .show-table{
   padding: 10px 50px;
 
