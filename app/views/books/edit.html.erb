@@ -1,22 +1,23 @@
-<index><%= flash[notice] %>
-</index>
-<div class="editing-page">
-<h1 class="editing-book">Editing Book</h1>
-
-
-<%= form_with model: @book, url: edit_book_path(@book.id), method: :patch do |f| %>
-
-<div class="editing-new">
-  <p class="editing-title">Title</p>
-
-  <%= f.text_field :title %>
-
-  <p class="editing-body">Body</p>
-  <%= f.text_area :body %>
-</div>
 <div>
+  <%= flash[:notice] %>
+</div>
+
+<%= form_with model: @book do |f| %>
+
+<div class="editing-page">
+  <h1 class="editing-book">Editing Book</h1>
+
+  <div class="editing-new">
+    <p class="editing-title">Title</p>
+      <%= f.text_field :title %>
+    <p class="editing-body">Body</p>
+      <%= f.text_area :body %>
+  </div>
+  <div>
   <%= f.submit 'update Book' %>
-<div
+  </div>
+</div>
+
 <% end %>
 
 <%= link_to "Show", book_path(@book.id) %>

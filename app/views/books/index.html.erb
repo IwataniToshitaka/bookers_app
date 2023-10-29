@@ -1,4 +1,4 @@
-<index><%= flash[notice] %>
+<index><%= flash[:notice] %>
 </index>
 
 <div class="title-books">
@@ -35,7 +35,6 @@
     <%= f.text_area :body %>
   <p>
     <%= f.submit 'Create Book' %>
-    
   </P>
 <% end %>
 
