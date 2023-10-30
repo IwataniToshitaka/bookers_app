@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'books#new'
   get '/index' => 'books#index'
-  # get '/new'
   get '/edit' => 'books#edit'
   get 'books/show' => 'books#show'
   resources :books

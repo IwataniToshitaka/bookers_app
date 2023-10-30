@@ -27,100 +27,94 @@
 /*ここからindexページ*/
 
 .table-layout{
-  width: 50%; /* tableの幅を100%に設定 */
-  height: 5px; /* tableの高さを200ピクセルに設定 */
-  margin: 10px; /* tableの周囲の余白を10ピクセルに設定 */
-  padding: 10px; /* table内のセルの余白を5ピクセルに設定 */
-  word-spacing: 10px;
+  width:50%; /* tableの幅を100%に設定 */
+  height:5px; /* tableの高さを200ピクセルに設定 */
+  margin:10px; /* tableの周囲の余白を10ピクセルに設定 */
+  padding:10px; /* table内のセルの余白を5ピクセルに設定 */
+  word-spacing:10px;
 }
 
 .books-table{
-  padding: 10px 20px;
+  padding:10px 20px;
 }
 
 .title-books{
-  font-size:　12px;
-  padding: 5px 20px;
+  font-size:12px;
+  padding:5px 20px;
 }
 
 .body-books{
-  font-size: 12px;
-  font-align: center;
+  font-size:12px;
+  font-align:center;
 }
 
 .table-body{
-  font-size: 12px;
-  font-align: center;
+  font-size:12px;
+  font-align:center;
 }
 
 .newbook-title{
-  white-space: nowrap;
+  white-space:nowrap;
 }
 
 .newbook-body{
-  white-space: nowrap;
+  white-space:nowrap;
 }
 
 .books-show{
-  font-size: 12px;
-  margin-right: 0px;
+  font-size:12px;
+  margin-right:0px;
   color:black;
   text-decoration:none;
 }
 
 .books-edit{
-  font-size: 12px;
-  margin-left: 0px;
-  margin-right: 0px;
-  color: black;
-  text-decoration:none;
-}
-
-.books-destroy{
-  font-size: 12px;
-  margin-left: 0px;
+  font-size:12px;
+  margin-left:0px;
+  margin-right:0px;
   color:black;
   text-decoration:none;
 }
 
-.create-botton {
-  border-width:1px;
-  font-size: 50px
-  padding: 10px 20px;
-  border-radius: 5px;
+.books-destroy{
+  font-size:12px;
+  margin-left:0px;
+  color:black;
+  text-decoration:none;
 }
 
-.new-post-list {
-  padding: 10px 20px;
-  flex-direction: column;
+
+.new-post-list{
+  padding:10px 20px;
+  flex-direction:column;
 }
 
 .push-title{
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top:0px;
+  margin-bottom:0px;
 }
 
 .push-body{
-  margin-top: 10px;
-  margin-bottom: 0px;
+  margin-top:10px;
+  margin-bottom:0px;
 }
 
 .error_title{
-  background-color: red;
-  width: 500px;
-  color: white;
-  text-align: auto;
-  border: 2px solid red;
+  background-color:red;
+  width:500px;
+  color:white;
+  text-align:auto;
+  border:2px solid red;
 }
 
 .error_body{
-  padding: 50px 20px;
-  color: black;
-  background-color: pink;
-  width: 500px;
-  color: black;
-  text-align: center;
-  border: 2px solid red;
+  padding:50px 20px;
+  color:black;
+  background-color:pink;
+  width:500px;
+  color:black;
+  text-align:center;
+  border:2px solid red;
 }
 
 
@@ -128,32 +122,31 @@
 
 .show-flash{
   font-size:12px;
-  margin-top: 10px;
-  padding: 10px 100px;
-  color : green;
+  margin-top:10px;
+  padding:10px 100px;
+  color:green;
 }
 
 .show-table{
-  padding: 10px 50px;
-
+  padding:10px 50px;
 }
 
 .show-title{
-  padding: 10px 10px ;
+  padding:10px 10px ;
   font-size:12px
 }
 
 .show-body{
-  padding: 10px 10px;
+  padding:10px 10px;
   font-size:12px;
 }
 
 .show_links{
-  padding: 10px 20px;
+  padding:10px 20px;
 }
 
 .edit_from_show{
-  border-right: 1px solid black;
+  border-right:1px solid black;
   color:black;
   text-decoration:none;
 }
@@ -169,33 +162,33 @@
 
 
 .editing-page{
-  padding: 1px 20px;
-  font-size: 12px;
-  margin-bottom: 0px;
+  padding:1px 20px;
+  font-size:12px;
+  margin-bottom:0px;
 }
 
 .editing-book{
-  margin-bottom: 0px;
+  margin-bottom:0px;
   color:black;
   text-decoration:none;
 }
 
 .editing-new{
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top:0px;
+  margin-bottom:0px;
   color:white;
   text-decoration:none;
 }
 
 .editing-title{
   font-size:12px;
-  margin-top: 0px;
-  margin-bottom: 0px
+  margin-top:0px;
+  margin-bottom:0px
 }
 
 .editing-body{
   font-size:12px;
-  margin-bottom: 0px;
+  margin-bottom:0px;
 }
 
 .linkshow{
@@ -211,13 +204,4 @@
 .back_from_edit{
   color:black;
   text-decoration:none;
-}
-
-.error{
-  color:red;
-  bockground:orange;
-  text-align: center;
-  border:2px solid black;
-  padding:12px ;
-  font-weight:850;
 }
