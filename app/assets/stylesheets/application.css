@@ -53,7 +53,7 @@
 .books-show{
   font-size: 12px;
   margin-right: 0px;
-  color:white;
+  color:black;
   text-decoration:none;
 }
 
@@ -68,7 +68,7 @@
 .books-destroy{
   font-size: 12px;
   margin-left: 0px;
-  color:white;
+  color:black;
   text-decoration:none;
 }
 
@@ -126,6 +126,11 @@
   border-collapse:  1px solid black;
 }
 
+.edit_from_show{
+  color:black;
+  text-decoration:none;
+}
+
 
 
 /*ここからeditページ*/
@@ -140,7 +145,7 @@
 
 .editing-book{
   margin-bottom: 0px;
-  color:block;
+  color:black;
   text-decoration:none;
 }
 
@@ -160,4 +165,14 @@
 .editing-body{
   font-size:12px;
   margin-bottom: 0px;
+}
+
+.linkshow{
+  color:black;
+  text-decoration:none;
+}
+
+.back_from_edit{
+  color:black;
+  text-decoration:none;
 }

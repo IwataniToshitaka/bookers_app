@@ -1,5 +1,6 @@
-<index><%= flash[:notice] %>
-</index>
+<div class="show-flash">
+    <%= flash[:notice] %>
+</div>
 
 <div class="title-books">
   <h1>Books</h1>
@@ -16,12 +17,12 @@
         <%= book.title %></td>
       <td class="newbook-body">
         <%= book.body %></td>
-      <td class="books-show">
-        <%= link_to "Show", book_path(book.id) %></td>
-      <td class="books-edit">
-        <%= link_to "Edit", edit_book_path(book.id) %></td>
-      <td class="books-destroy">
-        <%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %></td>
+      <td>
+        <%= link_to "Show", book_path(book.id), class:"books-show" %></td>
+      <td>
+        <%= link_to "Edit", edit_book_path(book.id), class:"books-edit" %></td>
+      <td>
+        <%= link_to "Destroy", book_path(book.id), class:"books-destroy",  method: :delete, "data-confirm" => "Are you sure？" %></td>
     </tr>
   <% end %>
 </table>
