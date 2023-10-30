@@ -36,9 +36,19 @@
     <%= f.text_area :body %>
   <p>
     <%= f.submit 'Create Book' %>
-
   </P>
 <% end %>
+
+<!--<% if @book.errors.any? %>
+  <div class="error">
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+-->
 
 </div>
 
