@@ -29,6 +29,20 @@
 
 <h2>New book</h2>
 
+
+<% if @book.errors.any? %>
+  <% error_pluralize = @book.errors.count > 1 ? 'errors' : 'error' %>
+  <!--<ul class="error_title">-->
+    <%= @book.errors.count %><%= error_pluralize %> prohibited this book from being saved:
+  <ul>
+  <!--<li class="error_body">-->
+    <% @book.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
 <%= form_with model: @book do |f| %>
   <p class="push-title">Title</p>
     <%= f.text_field :title %>
@@ -38,17 +52,6 @@
     <%= f.submit 'Create Book' %>
   </P>
 <% end %>
-
-<!--<% if @book.errors.any? %>
-  <div class="error">
-    <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
--->
 
 </div>
 

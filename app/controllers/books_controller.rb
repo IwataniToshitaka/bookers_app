@@ -14,7 +14,8 @@ class BooksController < ApplicationController
       book_id = @book.id
       redirect_to book_path(@book.id)  #showへリダイレクト
     else
-      render :index
+      @books = Book.all
+      render :"index"
     end
 end
 
@@ -46,7 +47,7 @@ end
     book = Book.find(params[:id]) #データ(レコード)を１件取得
 
     if  book.destroy #データ(レコード)を削除
-        redirect_to '/books'#投稿一覧画面へリダイレクト
+        redirect_to '/index'#投稿一覧画面へリダイレクト
         flash[:notice] = "Successfully!!!!!!(ﾟ∀ﾟ)"
     end
   end

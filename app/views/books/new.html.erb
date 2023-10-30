@@ -1,11 +1,18 @@
-<h1>新規投稿</h1>
-  <%= form_with model: @book do |f| %>
-    <h2>New Book</h2>
-      <p>Title</p>
-      <%= f.text_field :title %>
+<!DOCTYPE html>
+<html>
+<head>
+  <h1 class="new_title">ようこそ Bookersへ！</h1>
+    <style>
+      p strong {
+        font-weight: bold;
+        }
+    </style>
+</head>
+  <body>
+    <p class="body_from_new"><strong>Bookers</strong>では、さまざまな書籍に関するあなたの意見や</p>
+    <p class="body_from_new">印象を共有し交換することができます</p>
+  </body>
+</html>
 
-      <p>Body</p>
-      <%= f.text_area :body %>
+<a href= "https://c994ff6d1bf3415bbf91c541720a28f4.vfs.cloud9.ap-northeast-1.amazonaws.com/index" class="body_from_new">start</a>
 
-      <%= f.submit 'Create Book' %>
-    <% end %>
